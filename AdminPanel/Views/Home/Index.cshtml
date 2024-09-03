@@ -1,0 +1,71 @@
+﻿<div class="container dashboard-container">
+    <h1 class="text-center mb-4">Admin Dashboard</h1>
+    <div class="row">
+        <div class="col-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Orders</h5>
+                    <p class="card-text">View and manage orders.</p>
+                    <a asp-controller="Order" asp-action="OrderIndex" asp-route-status="all" class="btn btn-primary">Go to Orders</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Produect</h5>
+                    <p class="card-text">Add, edit, or delete menu items.</p>
+                    <a asp-controller="Product" asp-action="ProductIndex" class="btn btn-primary">Go to Product Menu</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Coupon</h5>
+                    <p class="card-text">Add, edit, or delete menu items.</p>
+                    <a asp-controller="Coupon" asp-action="CouponIndex" class="btn btn-primary">Go to Coupon Menu</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Customers</h5>
+                    <p class="card-text">View customer details.</p>
+                    <a asp-controller="Customer" asp-action="Index" class="btn btn-primary">Go to Customers</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br/>
+   @*  <div class="row">
+        <div class="col-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Orders</h5>
+                    <p class="card-text">View and manage orders.</p>
+                    <a asp-controller="Order" asp-action="OrderIndex" asp-route-status="all" class="btn btn-primary">Go to Orders</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Produect</h5>
+                    <p class="card-text">Add, edit, or delete menu items.</p>
+                    <a asp-controller="Product" asp-action="ProductIndex" class="btn btn-primary">Go to Menu</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Customers</h5>
+                    <p class="card-text">View customer details.</p>
+                    <a href="#" class="btn btn-primary">Go to Customers</a>
+                </div>
+            </div>
+        </div>
+    </div> *@
+</div>

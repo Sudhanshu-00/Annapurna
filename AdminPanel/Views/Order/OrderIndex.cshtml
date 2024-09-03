@@ -1,0 +1,58 @@
+﻿﻿@{
+
+    var status = Context.Request.Query["status"];
+
+}
+
+<div class="card shadow border-0 mt-4">
+    <div class="card-header bg-secondary bg-gradient ml-0 py-3 d-flex justify-content-between">
+        <div class="row">
+            <h1 class="text-white">Order List</h1>
+        </div>
+        <ul class="list-group list-group-horizontal-sm pt-2">
+
+            @if (!string.IsNullOrEmpty(status) && status != "monthlyOrderId" && status != "yearlyOrderId" && status != "dailyOrderId")
+            {
+                @Html.Partial("_OrderListStatus", status)
+            }
+            else if (!string.IsNullOrEmpty(status) && status == "monthlyOrderId")
+            {
+                @Html.Partial("_MonthlyOrderListStatus", status)
+            }
+            else if (!string.IsNullOrEmpty(status) && status == "yearlyOrderId")
+            {
+                @Html.Partial("_MonthlyOrderListStatus", status)
+            }
+            else
+            {
+                <a style="text-decoration:none">
+                    <input type="text" class="list-group-item" id="txtDatePicker">
+                </a>
+                <a style="text-decoration:none">
+                    <input type="button" class="list-group-item" value="Search" id="txtBtn">
+                </a>
+            }
+        </ul>
+    </div>
+    <div class="card-body p-4">
+        <table id="tblData" class="table table-bordered table-striped pt-3" style="width:100%">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Email</th>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Status</th>
+                    <th>Total</th>
+                    <th>Order Date</th>
+                    <th></th>
+                </tr>
+            </thead>
+
+        </table>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/order.js"></script>
+}
